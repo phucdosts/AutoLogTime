@@ -14,7 +14,7 @@ activity_to_fill = "Code"  # for Activity dropdown, modify your exact activity i
 project_to_fill = "TooGood ODC"  # for normal working day, modify your exact project in the dropdown
 # End data declaration
 
-driver = webdriver.Chrome(executable_path="./chromedriver.exe")
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
 
 driver.get("https://insider.saigontechnology.vn/dashboard")
 
@@ -57,5 +57,5 @@ save_close_btn = driver.find_element_by_xpath("//*[text()=' Save & Close ']")
 save_close_btn.click()
 
 # Uncomment the line below if you want the browser closes automatically after logging time finish
-# Keep it commented just in case we are aware of any issue happens when
+# Keep it commented just in case we are aware of any issue happens such as server error...
 # driver.close()
