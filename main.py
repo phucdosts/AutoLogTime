@@ -24,7 +24,7 @@ username_element.send_keys(username)
 driver.find_element_by_id("Password").send_keys(password)
 driver.find_element_by_class_name("btn-login").click()
 
-# dashboard page
+# Dashboard page
 today_element = WebDriverWait(driver, 120, 1).until(expect.visibility_of_element_located((By.CLASS_NAME, "fc-today")))
 ActionChains(driver).move_to_element(today_element).click().perform()
 
@@ -56,4 +56,6 @@ project_option.click()
 save_close_btn = driver.find_element_by_xpath("//*[text()=' Save & Close ']")
 save_close_btn.click()
 
-driver.close()
+# Uncomment the line below if you want the browser closes automatically after logging time finish
+# Keep it commented just in case we are aware of any issue happens when
+# driver.close()
